@@ -1,15 +1,12 @@
 
-import os
 from torchvision import transforms, datasets
 from torch.utils.data import DataLoader
 
-worker_number = os.cpu_count()
 
 def preparation_dataloaders(train_dir: str,
                             test_dir: str,
                             transform: transforms.Compose,
-                            batch_size: int,
-                            num_workers: int = worker_number):
+                            batch_size: int):
 
 
     """
@@ -48,13 +45,11 @@ def preparation_dataloaders(train_dir: str,
 
     train_dataloader = DataLoader(dataset = train_data,
                                   batch_size = batch_size,
-                                  shuffle = True,
-                                  num_workers = num_workers)
+                                  shuffle = True)
 
     test_dataloader = DataLoader(dataset = test_data,
                                  batch_size = batch_size,
-                                 shuffle = False,
-                                 num_workers = num_workers)
+                                 shuffle = False)
 
 
     return train_dataloader, test_dataloader, class_names

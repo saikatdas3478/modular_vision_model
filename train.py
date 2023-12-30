@@ -170,7 +170,7 @@ if MODEL_SELECTED in ['pre_model', 'new_model']:
     img_dir = urlretrieve(ADDED_IMAGE)[0]
 
     pred = single_predict(img_dir = img_dir,
-                            model_path = f'/content/{model_dir}/{model_name}',
+                            model_path = f'{model_dir}/{model_name}',
                             model_instance = new_model,
                             data_transform = data_transform,
                             class_names = class_names,
