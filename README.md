@@ -1,4 +1,4 @@
-# Training a model with a one line of code
+# Training a model with one line of code
 
 I have created a modular vision model, which can get commands and train as well as test the model with one line of command line code. Just like:
 | !python --batch_size 32 --model_name 'pre_model' | 
